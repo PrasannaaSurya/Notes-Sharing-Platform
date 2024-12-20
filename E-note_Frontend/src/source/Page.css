@@ -1,0 +1,65 @@
+.page {
+  margin-top: 50px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  max-height: 100vh;
+}
+
+.search-bar {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  position: relative; /* Allow positioning of search results */
+}
+
+.search-bar input {
+  width: 60%;
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+  border: none;
+  outline: none;
+  border: 5px solid black;
+}
+
+.search-bar button {
+  padding: 10px;
+  border-radius: 0 5px 5px 0;
+  border: none;
+  background-color: #6A4C93;
+  color: white;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #5A3C83;
+}
+
+.search-results {
+  position: absolute; /* Position dropdown below search box */
+  top: 100%; /* Position it directly below the input */
+  left: 19%;
+  right: 0;
+  background-color: white; /* Background color for the dropdown */
+  border: 1px solid #ccc; /* Border around the dropdown */
+  max-height: 200px; /* Maximum height of the dropdown */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+  width: 60%; /* Match width of the input */
+  z-index: 1000; /* Ensure it appears above other elements */
+  display: none; /* Hide by default */
+}
+
+
+.search-results ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.search-results li {
+  padding: 8px 12px; /* Padding for each item */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+.search-results li:hover {
+  background-color: #f0f0f0; /* Highlight on hover */
+}
